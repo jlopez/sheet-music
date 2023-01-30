@@ -1,4 +1,5 @@
 % LilyBin
+#(ly:set-option 'resolution '150)
 \version "2.18.2"
 \language "english"
 \header {
@@ -9,10 +10,11 @@
 
 rhAa = \relative c''{ r4 <e gs>\( fs | r <b, ds> cs }
 rhAb = \relative c''{ r <cs e> fs | r <b, ds> cs\) }
-rhAc = \relative c' { r <e gs> fs | r <g as>4. b8 }
+rhAc = \relative c' { r <e gs>\( fs | r <g as>4. b8\) }
 rhAd = \relative c' { r4 <e gs> fs | r <b, ds> cs }
 rhAe = \relative c' { r <cs e> fs | r <b, ds> cs }
 rhAf = \relative c' { r <cs e> fs | r <b, ds> b }
+rhAg = \relative c''{ r4 <e gs>\( fs | r <b, ds> cs\) }
 rhA  = { \rhAa \rhAb }
 
 % { << { s4 gs' fs | s ds cs | s e fs | s ds cs } \\ { r4 e2 | r4 b2 | r4 cs2 | r4 b2 } >> }
@@ -33,7 +35,7 @@ lhC  = \relative c  { e2 b'4 | gs2. | cs,2 gs'4 | b,2 \parenthesize fs'4 | a,2 e
 
 rhDa = \relative c' { r4 <gs ds'>2  | r4 fs'2 | r4 e2    | r4 ds2 }
 rhDb = \relative c' { r4 <b ds gs>2 | r4 fs'2 | <e gs>2. | r4 ds2 }
-rhDc = \relative c''{ b2 cs8 b | as2 b8 as | gs4. gs8 as gs | g2. }
+rhDc = \relative c''{ b2 cs8 b | as2 b8 as | gs4. as8 b as | g2. }
 rhDd = \relative c' { r4 gs'2 | r4 fs2 | r4 e2 | r4 ds2 }
 rhD  = \relative c' { \rhDa \rhDb \rhDc \rhDd}
 lhDa = \relative c  { fs4 cs' as | e b' gs | ds as' g }
@@ -69,12 +71,12 @@ melody = \relative c'' {
 	\key e \major
 	\repeat unfold 8 r2.
 	\repeat unfold 2 { r4 cs8\( ds e fs | ds2 cs4~ | cs\) r2 | r2. }
-	\repeat unfold 2 { r4 e8\( fs gs b | gs4 fs2\) | r4 cs8\( ds e gs | ds2 cs4 | a2 cs4 | e ds b | cs2.\) r2. }
-	\repeat unfold 6 r2.
+	\repeat unfold 2 { r4 e8\( fs gs b | gs4 fs2\) | r4 cs8\( ds e gs | ds2 cs4 | a2 cs4 | e ds b | cs2.\) }
+	\repeat unfold 8 r2.
 	\repeat unfold 3 {
 		\repeat unfold 2 { r4 cs8\( ds e fs | ds2 cs4~ | cs cs ds~ | ds e fs\) }
-		\repeat unfold 2 { r4 e8\( fs gs b | gs4 fs2\) | r4 cs8\( ds e gs | ds2 cs4 | a2 cs4 | e ds b | cs2.\) r2. }
-		\repeat unfold 2 r2.
+		\repeat unfold 2 { r4 e8\( fs gs b | gs4 fs2\) | r4 cs8\( ds e gs | ds2 cs4 | a2 cs4 | e ds b | cs2.\) }
+		\repeat unfold 4 r2.
 		r2
 		\repeat unfold 2 { gs'8\( gs | fs4 ds fs | gs2( as8 gs | g4) g( gs)\) | r2 gs8\( as | b4 as gs | ds2\) gs8\( ds | cs4 b cs | ds2\) }
 		r4
@@ -172,10 +174,10 @@ rh = {
 	\key e \major
 	\rhA \rhA
 	\repeat unfold 2 \rhBa
-	\repeat unfold 2 { \rhC \rhAa }
-	\rhAb \rhA
+	\rhC \rhAg \rhC
+	\rhA \rhA
 	\repeat unfold 2 \rhBa
-	\repeat unfold 2 { \rhC \rhAa }
+	\repeat unfold 2 { \rhC \rhAg }
 	\rhAc
 	\rhD
 	\rhE
@@ -185,7 +187,7 @@ rh = {
 	\repeat unfold 2 {
 		\rhA
 		\repeat unfold 2 \rhBa
-		\repeat unfold 2 { \rhC \rhAa }
+		\repeat unfold 2 { \rhC \rhAg }
 		\rhAc
 		\rhD
 		\rhE
