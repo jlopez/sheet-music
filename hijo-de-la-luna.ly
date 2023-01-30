@@ -1,4 +1,5 @@
 % LilyBin
+#(ly:set-option 'resolution '150)
 \version "2.18.2"
 \language "english"
 \header {
@@ -9,10 +10,11 @@
 
 rhAa = \relative c''{ r4 <e gs>\( fs | r <b, ds> cs }
 rhAb = \relative c''{ r <cs e> fs | r <b, ds> cs\) }
-rhAc = \relative c' { r <e gs> fs | r <g as>4. b8 }
+rhAc = \relative c' { r <e gs>\( fs | r <g as>4. b8\) }
 rhAd = \relative c' { r4 <e gs> fs | r <b, ds> cs }
 rhAe = \relative c' { r <cs e> fs | r <b, ds> cs }
 rhAf = \relative c' { r <cs e> fs | r <b, ds> b }
+rhAg = \relative c''{ r4 <e gs>\( fs | r <b, ds> cs\) }
 rhA  = { \rhAa \rhAb }
 
 % { << { s4 gs' fs | s ds cs | s e fs | s ds cs } \\ { r4 e2 | r4 b2 | r4 cs2 | r4 b2 } >> }
@@ -172,10 +174,10 @@ rh = {
 	\key e \major
 	\rhA \rhA
 	\repeat unfold 2 \rhBa
-	\repeat unfold 2 { \rhC \rhAa }
-	\rhAb \rhA
+	\rhC \rhAg \rhC
+	\rhA \rhA
 	\repeat unfold 2 \rhBa
-	\repeat unfold 2 { \rhC \rhAa }
+	\repeat unfold 2 { \rhC \rhAg }
 	\rhAc
 	\rhD
 	\rhE
@@ -185,7 +187,7 @@ rh = {
 	\repeat unfold 2 {
 		\rhA
 		\repeat unfold 2 \rhBa
-		\repeat unfold 2 { \rhC \rhAa }
+		\repeat unfold 2 { \rhC \rhAg }
 		\rhAc
 		\rhD
 		\rhE
