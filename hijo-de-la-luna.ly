@@ -28,12 +28,12 @@ lhAh = \relative c  { cs2. | cs | cs | cs }
 rhBa = \relative c' { r4 <e gs>2 | r4 <fs a>2 | r4 <e gs> a | r4 <ds, gs> fs }
 lhBa = \relative c  { cs2 gs'4 | fs2 a4 | cs,2. | c }
 
-rhC  = \relative c' { r4 <e gs>2 | r4 <fs cs'>2 | r4 <e gs>2 | r4 <b ds>2 | r4 <cs e>2 | r4 <ds fs>2 }
+rhC  = \relative c' { r4 <e gs>2 | r4 <fs c'>2 | r4 <e gs>2 | r4 <b ds>2 | r4 <cs e>2 | r4 <ds fs>2 }
 lhC  = \relative c  { e2 b'4 | gs2. | cs,2 gs'4 | b,2 \parenthesize fs'4 | a,2 e'4 | b2 fs'4 }
 
 rhDa = \relative c' { r4 <gs ds'>2  | r4 fs'2 | r4 e2    | r4 ds2 }
 rhDb = \relative c' { r4 <b ds gs>2 | r4 fs'2 | <e gs>2. | r4 ds2 }
-rhDc = \relative c''{ b2 cs8 b | as2 b8 as | gs4. as8 b as | g2. }
+rhDc = \relative c''{ b2 cs8 b | as2 b8 as | gs4. gs8 as gs | g2. }
 rhDd = \relative c' { r4 gs'2 | r4 fs2 | r4 e2 | r4 ds2 }
 rhD  = \relative c' { \rhDa \rhDb \rhDc \rhDd}
 lhDa = \relative c  { fs4 cs' as | e b' gs | ds as' g }
@@ -69,12 +69,12 @@ melody = \relative c'' {
 	\key e \major
 	\repeat unfold 8 r2.
 	\repeat unfold 2 { r4 cs8\( ds e fs | ds2 cs4~ | cs\) r2 | r2. }
-	\repeat unfold 2 { r4 e8\( fs gs b | gs4 fs2\) | r4 cs8\( ds e gs | ds2 cs4 | a2 cs4 | e ds b | cs2.\) }
-	\repeat unfold 8 r2.
+	\repeat unfold 2 { r4 e8\( fs gs b | gs4 fs2\) | r4 cs8\( ds e gs | ds2 cs4 | a2 cs4 | e ds b | cs2.\) r2. }
+	\repeat unfold 6 r2.
 	\repeat unfold 3 {
 		\repeat unfold 2 { r4 cs8\( ds e fs | ds2 cs4~ | cs cs ds~ | ds e fs\) }
-		\repeat unfold 2 { r4 e8\( fs gs b | gs4 fs2\) | r4 cs8\( ds e gs | ds2 cs4 | a2 cs4 | e ds b | cs2.\) }
-		\repeat unfold 4 r2.
+		\repeat unfold 2 { r4 e8\( fs gs b | gs4 fs2\) | r4 cs8\( ds e gs | ds2 cs4 | a2 cs4 | e ds b | cs2.\) r2. }
+		\repeat unfold 2 r2.
 		r2
 		\repeat unfold 2 { gs'8\( gs | fs4 ds fs | gs2( as8 gs | g4) g( gs)\) | r2 gs8\( as | b4 as gs | ds2\) gs8\( ds | cs4 b cs | ds2\) }
 		r4
